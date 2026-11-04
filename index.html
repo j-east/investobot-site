@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Investobot One-Pager</title>
+<title>Investobot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -93,17 +93,29 @@ tr.ref td { color: var(--muted); }
 
   <header>
     <h1>Investobot</h1>
-    <p class="what">Software to manage risk in leveraged index tracking ETFs</p>
+    <p class="what">One rule for leveraged S&amp;P funds, running on your own account</p>
   </header>
 
   <div class="exec">
-    <p>It's difficult to beat the S&amp;P 500. So if you can't beat them, join them.</p>
-    <p>Leverage makes sense when the market is up and can be disastrous in a downturn. Investobot holds the S&amp;P 500 through leveraged index funds, adds exposure while the market is above trend, and cuts it when trend or volatility breaks.</p>
+    <p><strong>Everyone who buys a leveraged S&amp;P fund and holds it ends up where they started. After a trip through minus 99%.</strong></p>
+    <p>Since 1928, a 3x S&amp;P fund held through everything returns about the same as the plain index, and loses 99.9% along the way. The leverage was never the problem. Holding it through the drop was.</p>
+    <p>Investobot is software that runs one rule on your own brokerage account: more of the market while it is working, much less when it stops. The rule fits on an index card, and it makes sense the moment you read it. It is not printed on this page.</p>
+  </div>
+
+  <div class="contact">
+    <p class="ask">Email with one line: how much, and what kind of account. You will get back what setup takes, and what it would have done with your number.</p>
+    <p class="who"><strong>John Evans</strong> &middot; <a href="mailto:hello@investobot.si">hello@investobot.si</a></p>
+  </div>
+
+  <div class="stats">
+    <div><b>$2.5M vs $663k</b><span>Aggressive vs S&amp;P held, $100,000 after 20 years, typical simulated path</span></div>
+    <div><b>28.3% vs 15.1%</b><span>Aggressive vs S&amp;P, real fund prices with dividends, 2016 to 2026</span></div>
+    <div><b>1 of 1,056</b><span>Rules that survived every test we ran against them since 1928. Investobot runs that one.</span></div>
   </div>
 
   <div class="tag">
-    <p class="tagline">More of the market when it's working. Less when it isn't.</p>
-    <p class="sub">Deterministic rules, easy to follow. Your account, on your machine.</p>
+    <p class="tagline">Same index. Same money. The difference is whether something is watching the exit.</p>
+    <p class="sub">The 2016 to 2026 line is actual fund prices, not a model. It is also a decade with no 1929, 1973, 2000 or 2008 in it. The 1928 figures have all four.</p>
   </div>
 
   <section>
@@ -116,19 +128,29 @@ tr.ref td { color: var(--muted); }
     <p class="note">Simulated, not traded. These 20 years include 2008 but miss 1929, 1973 and 2000; the figures below cover every market since 1928. The rule was chosen on this same history, which flatters the result. Fund costs included, taxes excluded.</p>
   </section>
 
-  <div class="exec small">
-    <p>Tested on market data back to 1928, every setting finished ahead of the S&amp;P, and the Balanced setting did it with a smaller worst drop. You run it yourself, for a flat yearly fee.</p>
-  </div>
-
-  <div class="stats">
-    <div><b>14.4% vs 9.6%</b><span>Balanced vs S&amp;P, simulated return per year, 1928 to 2026</span></div>
-    <div><b>−71% vs −84%</b><span>Balanced vs S&amp;P, worst simulated drop on the same history</span></div>
-    <div><b>$0 of assets</b><span>We never hold your money. No percentage fee and no performance fee.</span></div>
-  </div>
-
-  <div class="contact">
-    <p class="ask">Questions? Email.</p>
-    <p class="who"><strong>John Evans</strong> &middot; <a href="mailto:hello@investobot.si">hello@investobot.si</a></p>
+  <div class="two">
+    <section>
+      <h2>We tested 1,056 rules. 1,055 of them were luck.</h2>
+      <p>Anyone can make a backtest look good. Pick a rule, tune it to the past, show the chart. So we did the opposite. We ran 1,056 entry and exit rules across every US market since 1928, held out whole eras, resampled a thousand alternate histories, and tried to make each one fail.</p>
+      <p>One survived in every version of the test. That is the rule Investobot runs. Not the best rule on the chart, which is always an accident. The one that was still standing after we tried to kill it. It is simple, the way a recipe is simple, and tuned over thousands of runs to be exactly that simple. Once you see it, it makes sense. Most people's first reaction is that they should have been doing this all along.</p>
+      <p>My own account runs the Aggressive setting. You can watch the live window on your own screen once you are set up, and you can read every line of the code. Not before.</p>
+    </section>
+    <section>
+      <h2>Who this is for</h2>
+      <ul>
+        <li>You already own index funds and have for years. You are not here to trade.</li>
+        <li>You can watch a 40% drop without selling, because you have done it.</li>
+        <li>You want the leverage your broker already offers, with the part that ruins people removed.</li>
+        <li>You would rather pay a flat fee than a percentage of your money every year forever.</li>
+      </ul>
+      <h2>Who it is not for</h2>
+      <ul>
+        <li>Money you need within five years.</li>
+        <li>Anyone who will turn it off during the drop. The rule only works if it runs.</li>
+        <li>Anyone who wants to adjust it. The rule is not tunable. Every tuned version we tested lost to luck.</li>
+      </ul>
+      <p>If you read the second list and felt relieved, email. If you felt argued with, do not.</p>
+    </section>
   </div>
 
   <section>
@@ -137,61 +159,47 @@ tr.ref td { color: var(--muted); }
     <table>
       <thead><tr><th>Setting</th><th>Worst 5% of paths, per year</th><th>Typical, per year</th><th>Best 5% of paths, per year</th><th>Ending value, worst 5%</th><th>Ending value, typical</th><th>Chance of a 50% drop</th><th>Chance of a 75% drop</th><th>Worst drop, 1928 on</th></tr></thead>
       <tbody>
-        <tr><td><strong>Steady</strong><span>Half S&amp;P held, half 2x rule</span></td><td>3.3%</td><td>12.2%</td><td>21.7%</td><td>$193k</td><td>$1.0M</td><td>34%</td><td>3%</td><td>−76%</td></tr>
-        <tr><td><strong>Balanced</strong><span>2x rule</span></td><td>3.9%</td><td>13.7%</td><td>24.5%</td><td>$215k</td><td>$1.3M</td><td>39%</td><td>2%</td><td>−71%</td></tr>
-        <tr><td><strong>Aggressive</strong><span>3x rule</span></td><td>3.1%</td><td>17.5%</td><td>34.1%</td><td>$186k</td><td>$2.5M</td><td>85%</td><td>16%</td><td>−84%</td></tr>
+        <tr><td><strong>Steady</strong><span>Half held, half 2x under the rule</span></td><td>3.3%</td><td>12.2%</td><td>21.7%</td><td>$193k</td><td>$1.0M</td><td>34%</td><td>3%</td><td>−76%</td></tr>
+        <tr><td><strong>Balanced</strong><span>2x under the rule</span></td><td>3.9%</td><td>13.7%</td><td>24.5%</td><td>$215k</td><td>$1.3M</td><td>39%</td><td>2%</td><td>−71%</td></tr>
+        <tr><td><strong>Aggressive</strong><span>3x under the rule</span></td><td>3.1%</td><td>17.5%</td><td>34.1%</td><td>$186k</td><td>$2.5M</td><td>85%</td><td>16%</td><td>−84%</td></tr>
         <tr class="ref"><td><strong>S&amp;P held</strong><span>For comparison</span></td><td>1.8%</td><td>9.9%</td><td>17.0%</td><td>$142k</td><td>$663k</td><td>45%</td><td>7%</td><td>−84%</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="note">Hypothetical, before tax, with estimated fund costs. 1,000 simulated paths built by resampling daily US market returns since 1926.</p>
+    <p class="note">Read the drop columns before the return columns. Aggressive will, at some point, cut your account in half. The question Investobot answers is what happens after that. Hypothetical, before tax, with estimated fund costs. 1,000 simulated paths built by resampling daily US market returns since 1926.</p>
   </section>
 
   <div class="two">
     <section>
-      <h2>The rule</h2>
-      <ul>
-        <li><strong>Step out</strong> when the S&amp;P closes below its 150-day average, or 20-day volatility rises above 25%.</li>
-        <li><strong>While out,</strong> hold half S&amp;P and half T-bills.</li>
-        <li><strong>Step back in</strong> after 3 closes in a row above the 100-day exponential average.</li>
-      </ul>
-      <p>Trades happen at the close after the signal, about 5 times a year. You can read every line of the code.</p>
-    </section>
-    <section>
       <h2>How it runs and what you pay</h2>
       <ul>
-        <li>Runs on a VPS you rent, connected to your brokerage account with your own keys.</li>
-        <li>You pick the setting and can switch it off at any time.</li>
-        <li>We keep no access after setup.</li>
-        <li><strong>[Annual fee]</strong> a year, flat, for software support and running your VPS. You also pay your broker, and the funds charge about 0.9% a year.</li>
+        <li>Your brokerage account. Your API keys. A small server that you rent and only you can log into.</li>
+        <li>You pick the setting. One switch turns it off. Off means it stops trading; it never sells what you hold.</li>
+        <li>We never hold your money and keep no access after setup. No percentage fee, no performance fee, no custody.</li>
+        <li><strong>[Annual fee]</strong> a year, flat. It covers support and the server. Your broker and the funds charge their own fees, about 0.9% a year for the funds.</li>
       </ul>
+      <p><strong>Email <a href="mailto:hello@investobot.si">hello@investobot.si</a>.</strong> One line is enough: the amount, and whether it is an IRA or taxable.</p>
     </section>
-  </div>
-
-  <div class="two">
     <section>
       <h2>What can go wrong</h2>
+      <p>The exit is a rule, not a prophecy.</p>
       <ul>
-        <li>Day-to-day swings run larger than the S&amp;P on every setting. Aggressive will probably lose more than half at some point.</li>
-        <li>Crashes can move faster than the rule. One bad day can cost a third or more at 3x.</li>
-        <li>The edge depends on market trends lasting. In simulated markets with the trends removed, switching rules lost to holding the S&amp;P.</li>
+        <li>One bad day can cost a third or more at 3x. The rule trades at the close; a crash inside a single session gets through.</li>
+        <li>Day-to-day swings run larger than the S&amp;P on every setting.</li>
+        <li>The edge depends on trends lasting. In simulated markets with the trends removed, every switching rule lost to holding the index.</li>
         <li>With T-bills at 6%, typical Aggressive falls to 13.5% and its worst 5% to 0.9%.</li>
-        <li>The future can be worse than anything in the record.</li>
+        <li>The future can be worse than anything in the record. Aggressive fell 84% in the simulated 1930s.</li>
       </ul>
-    </section>
-    <section>
-      <h2>Taxes</h2>
-      <p>Switching realizes gains, so the account type matters. Typical Aggressive return after federal tax:</p>
-      <ul>
-        <li>IRA or Roth: 18.2% a year</li>
-        <li>Taxable, S&amp;P held plus index futures: 16.7%</li>
-        <li>Taxable, leveraged funds: 15.3%</li>
-      </ul>
-      <p class="note">Assumes 24% ordinary and 15% long-term rates, no state tax. Talk to a tax professional.</p>
     </section>
   </div>
 
-  <p class="fine">This page describes software. It is not investment, tax or legal advice or a recommendation to buy any security. Leveraged funds reset daily and can lose most of their value. All figures are hypothetical, come from simulations with the benefit of hindsight, and do not reflect actual trading. No account has traded these rules and no one has earned these returns. Simulations cannot capture every cost, including slippage, tax on dividends and fund changes. Past market behavior does not predict future results. You can lose most of your investment. "S&amp;P 500" is a trademark of its owner, and this product has no connection to it.</p>
+  <section>
+    <h2>Taxes</h2>
+    <p>Switching realizes gains, so the account type matters. Typical Aggressive return after federal tax: 18.2% a year in an IRA or Roth, 16.7% taxable with S&amp;P held plus index futures, 15.3% taxable with leveraged funds.</p>
+    <p class="note">Assumes 24% ordinary and 15% long-term rates, no state tax. Talk to a tax professional.</p>
+  </section>
+
+  <p class="fine">This page describes software. It is not investment, tax or legal advice or a recommendation to buy any security. Leveraged funds reset daily and can lose most of their value. Simulated figures are hypothetical, come from simulations with the benefit of hindsight, and do not reflect actual trading. The 2016 to 2026 figures are computed from historical fund prices, not from any account's trades. The author's own account began running the Aggressive setting on November 3, 2026 and has no track record. No one has earned these returns. Simulations cannot capture every cost, including slippage, tax on dividends and fund changes. Past market behavior does not predict future results. You can lose most of your investment. "S&amp;P 500" is a trademark of its owner, and this product has no connection to it.</p>
   <p class="colophon">Investobot &middot; &copy; John Evans 2026</p>
 </main>
 <script>
